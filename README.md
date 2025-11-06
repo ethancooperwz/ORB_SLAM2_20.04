@@ -1,5 +1,7 @@
-# ORB-SLAM2
-**Authors:** [Raul Mur-Artal](http://webdiis.unizar.es/~raulmur/), [Juan D. Tardos](http://webdiis.unizar.es/~jdtardos/), [J. M. M. Montiel](http://webdiis.unizar.es/~josemari/) and [Dorian Galvez-Lopez](http://doriangalvez.com/) ([DBoW2](https://github.com/dorian3d/DBoW2))
+# ORB_SLAM2_20.04
+#该工程是在原版ORB_SLAM2基础上进行版本兼容性调试，基于Ubuntu20.04进行调试，详细调试步骤亦可见：(https://blog.csdn.net/weixin_45728280/article/details/151900251)。该工程仅供学习使用，如有侵权联系删除(This project is for learning use only. If there is any infringement, please contact and delete it.)。
+**Original Authors:** [Raul Mur-Artal](http://webdiis.unizar.es/~raulmur/), [Juan D. Tardos](http://webdiis.unizar.es/~jdtardos/), [J. M. M. Montiel](http://webdiis.unizar.es/~josemari/) and [Dorian Galvez-Lopez](http://doriangalvez.com/) ([DBoW2](https://github.com/dorian3d/DBoW2))
+**Secondary developer:** [Ethan Cooper]
 
 **13 Jan 2017**: OpenCV 3 and Eigen 3.3 are now supported.
 
@@ -56,27 +58,28 @@ if you use ORB-SLAM2 (Stereo or RGB-D) in an academic work, please cite:
      }
 
 # 2. Prerequisites
-We have tested the library in **Ubuntu 12.04**, **14.04** and **16.04**, but it should be easy to compile in other platforms. A powerful computer (e.g. i7) will ensure real-time performance and provide more stable and accurate results.
+I have tested the library in **Ubuntu 20.04**, but it should be easy to compile in other platforms. A powerful computer (e.g. i7) will ensure real-time performance and provide more stable and accurate results.
 
-## C++11 or C++0x Compiler
-We use the new thread and chrono functionalities of C++11.
+## C++14 
+I use the new thread and chrono functionalities of C++14.
 
 ## Pangolin
-We use [Pangolin](https://github.com/stevenlovegrove/Pangolin) for visualization and user interface. Dowload and install instructions can be found at: https://github.com/stevenlovegrove/Pangolin.
+I use [Pangolin](https://github.com/stevenlovegrove/Pangolin) for visualization and user interface. Dowload and install instructions can be found at: https://github.com/stevenlovegrove/Pangolin.**Tested with Pangolin 0.5**.
 
 ## OpenCV
-We use [OpenCV](http://opencv.org) to manipulate images and features. Dowload and install instructions can be found at: http://opencv.org. **Required at leat 2.4.3. Tested with OpenCV 2.4.11 and OpenCV 3.2**.
+I use [OpenCV](http://opencv.org) to manipulate images and features. Dowload and install instructions can be found at: http://opencv.org. **Tested with OpenCV 3.4.16, 3.X version is the best compatible.**.
 
 ## Eigen3
-Required by g2o (see below). Download and install instructions can be found at: http://eigen.tuxfamily.org. **Required at least 3.1.0**.
+Required by g2o (see below). Download and install instructions can be found at: http://eigen.tuxfamily.org. **Required at least 3.1.0, Tested with Eigen 3.3.7, 3.3.7、3.3.9 is the best cmpatible.**.
 
 ## DBoW2 and g2o (Included in Thirdparty folder)
-We use modified versions of the [DBoW2](https://github.com/dorian3d/DBoW2) library to perform place recognition and [g2o](https://github.com/RainerKuemmerle/g2o) library to perform non-linear optimizations. Both modified libraries (which are BSD) are included in the *Thirdparty* folder.
+It has been included in the project, and it can be used after decompression.
+You can also use modified versions of the [DBoW2](https://github.com/dorian3d/DBoW2) library to perform place recognition and [g2o](https://github.com/RainerKuemmerle/g2o) library to perform non-linear optimizations. Both modified libraries (which are BSD) are included in the *Thirdparty* folder.
 
 ## ROS (optional)
 We provide some examples to process the live input of a monocular, stereo or RGB-D camera using [ROS](ros.org). Building these examples is optional. In case you want to use ROS, a version Hydro or newer is needed.
 
-# 3. Building ORB-SLAM2 library and examples
+# 3. Building ORB_SLAM2_20.04 library and examples
 
 Clone the repository:
 ```
